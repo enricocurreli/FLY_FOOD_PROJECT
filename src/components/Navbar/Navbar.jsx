@@ -34,7 +34,7 @@ const Navbar = () => {
     <>
       <div
         className={
-          "navbar lg:bg-cyan-900 bg-primary text-zinc-100 w-full transition py-3 px-5 " +
+          "navbar bg-cyan-900  text-zinc-100 w-full transition py-3 px-5 " +
           navbarClasses.join(" ")
         }
       >
@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content lg:bg-base-100 bg-primary text-zinc-100 rounded-box z-[1] mt-7 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-cyan-900  bg-primary text-zinc-100 rounded-box z-[1] mt-7 w-52 p-2 shadow"
             >
               <li>
                 <Link to={routes.home}>HOME</Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className=" btn bg-yellow-500 rounded-full text-3xl text-white" onMouseOver={() => document.getElementById("my_modal_5").showModal()}>
+          <Link className=" btn bg-primary rounded-full text-3xl text-white" onMouseOver={() => document.getElementById("my_modal_5").showModal()}>
             <FaOpencart />
           </Link>
         </div>

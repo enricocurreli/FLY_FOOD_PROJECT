@@ -1,5 +1,5 @@
 import React from 'react'
-import CardHome from '../CardHome/CardHome'
+
 
 
 const Popular = () => {
@@ -19,9 +19,9 @@ const Popular = () => {
       
         <div className='container flex justify-center flex-wrap rounded-3xl bg-orange-300'>
 
+        {/* <CardHome />
         <CardHome />
-        <CardHome />
-        <CardHome />
+        <CardHome /> */}
 
         </div>
       

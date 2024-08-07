@@ -4,7 +4,7 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
-const CardHome = () => {
+const Card = ({post}) => {
 
   const btnText = <IoArrowForwardOutline />
 
@@ -15,9 +15,9 @@ const CardHome = () => {
           <img src={imgHeader} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <div className="badge badge-secondary">NEW</div>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div className="badge badge-secondary">TOP</div>
+          <h2 className="card-title">{post.nome}</h2>
+          <p>{post.anteprima}</p>
           <div className="card-actions justify-end">
 
             <Link to={`/detail/`}>
@@ -31,4 +31,4 @@ const CardHome = () => {
   );
 };
 
-export default CardHome;
+export default Card;

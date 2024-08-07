@@ -1,0 +1,458 @@
+
+  [   
+        {
+          "id": 1,
+          "nome": "Panino Classico",
+          "anteprima": "Un classico intramontabile.",
+          "descrizione": "Panino con prosciutto, formaggio, lattuga e pomodoro. Perfetto per una pausa pranzo veloce e gustosa.",
+          "ingredienti": ["Pane", "Prosciutto", "Formaggio", "Lattuga", "Pomodoro"],
+          "categoria": "panini",
+          "prezzo": 5.00
+        },
+        {
+          "id": 2,
+          "nome": "Panino Vegetariano",
+          "anteprima": "Delizioso e salutare.",
+          "descrizione": "Panino con verdure grigliate, formaggio di capra e pesto. Un'opzione perfetta per i vegetariani.",
+          "ingredienti": ["Pane", "Verdure grigliate", "Formaggio di capra", "Pesto"],
+          "categoria": "panini",
+          "prezzo": 6.50
+        },
+        {
+          "id": 3,
+          "nome": "Panino al Pollo",
+          "anteprima": "Sapori decisi.",
+          "descrizione": "Panino con pollo arrosto, insalata, pomodori e maionese. Una scelta proteica e deliziosa.",
+          "ingredienti": ["Pane", "Pollo arrosto", "Insalata", "Pomodori", "Maionese"],
+          "categoria": "panini",
+          "prezzo": 7.00
+        },
+        {
+          "id": 4,
+          "nome": "Panino Caprese",
+          "anteprima": "Freschezza mediterranea.",
+          "descrizione": "Panino con mozzarella fresca, pomodori, basilico e olio d'oliva. Semplice e gustoso.",
+          "ingredienti": ["Pane", "Mozzarella", "Pomodori", "Basilico", "Olio d'oliva"],
+          "categoria": "panini",
+          "prezzo": 5.50
+        },
+        {
+          "id": 5,
+          "nome": "Panino al Tonno",
+          "anteprima": "Gusto di mare.",
+          "descrizione": "Panino con tonno, cipolle, lattuga e maionese. Un classico dei panini di pesce.",
+          "ingredienti": ["Pane", "Tonno", "Cipolle", "Lattuga", "Maionese"],
+          "categoria": "panini",
+          "prezzo": 6.00
+        },
+        {
+          "id": 6,
+          "nome": "Panino al Tacchino",
+          "anteprima": "Leggero e saporito.",
+          "descrizione": "Panino con fette di tacchino, formaggio svizzero, lattuga e senape. Perfetto per chi cerca leggerezza.",
+          "ingredienti": ["Pane", "Tacchino", "Formaggio svizzero", "Lattuga", "Senape"],
+          "categoria": "panini",
+          "prezzo": 6.50
+        },
+        {
+          "id": 7,
+          "nome": "Panino Piccante",
+          "anteprima": "Un'esplosione di sapore.",
+          "descrizione": "Panino con salame piccante, formaggio piccante, peperoni e salsa di peperoncino. Per chi ama i sapori forti.",
+          "ingredienti": ["Pane", "Salame piccante", "Formaggio piccante", "Peperoni", "Salsa di peperoncino"],
+          "categoria": "panini",
+          "prezzo": 7.00
+        },
+        {
+          "id": 8,
+          "nome": "Panino con Speck",
+          "anteprima": "Sapori montani.",
+          "descrizione": "Panino con speck, formaggio di montagna, rucola e pomodori secchi. Un gusto unico e ricco.",
+          "ingredienti": ["Pane", "Speck", "Formaggio di montagna", "Rucola", "Pomodori secchi"],
+          "categoria": "panini",
+          "prezzo": 7.50
+        },
+        {
+          "id": 9,
+          "nome": "Panino Gourmet",
+          "anteprima": "Per i palati raffinati.",
+          "descrizione": "Panino con roast beef, rucola, parmigiano e salsa tartufata. Un'esperienza di gusto superiore.",
+          "ingredienti": ["Pane", "Roast beef", "Rucola", "Parmigiano", "Salsa tartufata"],
+          "categoria": "panini",
+          "prezzo": 8.00
+        },
+        {
+          "id": 10,
+          "nome": "Panino Rustico",
+          "anteprima": "Genuino e gustoso.",
+          "descrizione": "Panino con salsiccia, cime di rapa e pecorino. Un sapore rustico e autentico.",
+          "ingredienti": ["Pane", "Salsiccia", "Cime di rapa", "Pecorino"],
+          "categoria": "panini",
+          "prezzo": 7.50
+        },
+        {
+          "id": 11,
+          "nome": "Margherita",
+          "anteprima": "La classica pizza italiana.",
+          "descrizione": "Pizza con pomodoro, mozzarella e basilico. Semplice e deliziosa, amata da tutti.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Basilico"],
+          "categoria": "pizze",
+          "prezzo": 7.00
+        },
+        {
+          "id": 12,
+          "nome": "Pepperoni",
+          "anteprima": "Un classico americano.",
+          "descrizione": "Pizza con pomodoro, mozzarella e salame piccante. Un'esplosione di sapore in ogni morso.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Salame piccante"],
+          "categoria": "pizze",
+          "prezzo": 8.50
+        },
+        {
+          "id": 13,
+          "nome": "Quattro Stagioni",
+          "anteprima": "Per chi ama la varietà.",
+          "descrizione": "Pizza divisa in quattro parti, ognuna con un diverso topping: prosciutto, funghi, carciofi e olive.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Prosciutto", "Funghi", "Carciofi", "Olive"],
+          "categoria": "pizze",
+          "prezzo": 9.00
+        },
+        {
+          "id": 14,
+          "nome": "Capricciosa",
+          "anteprima": "Ricca e saporita.",
+          "descrizione": "Pizza con pomodoro, mozzarella, prosciutto cotto, funghi, carciofi e olive. Un mix irresistibile.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Prosciutto cotto", "Funghi", "Carciofi", "Olive"],
+          "categoria": "pizze",
+          "prezzo": 9.00
+        },
+        {
+          "id": 15,
+          "nome": "Diavola",
+          "anteprima": "Piccante e saporita.",
+          "descrizione": "Pizza con pomodoro, mozzarella e salame piccante. Per chi ama i sapori forti.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Salame piccante"],
+          "categoria": "pizze",
+          "prezzo": 8.50
+        },
+        {
+          "id": 16,
+          "nome": "Prosciutto e Funghi",
+          "anteprima": "Un abbinamento classico.",
+          "descrizione": "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi. Un gusto che non passa mai di moda.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Prosciutto cotto", "Funghi"],
+          "categoria": "pizze",
+          "prezzo": 8.50
+        },
+        {
+          "id": 17,
+          "nome": "Quattro Formaggi",
+          "anteprima": "Per gli amanti del formaggio.",
+          "descrizione": "Pizza con una combinazione di quattro formaggi diversi: mozzarella, gorgonzola, fontina e parmigiano.",
+          "ingredienti": ["Mozzarella", "Gorgonzola", "Fontina", "Parmigiano"],
+          "categoria": "pizze",
+          "prezzo": 9.50
+        },
+        {
+          "id": 18,
+          "nome": "Ortolana",
+          "anteprima": "Freschezza e leggerezza.",
+          "descrizione": "Pizza con pomodoro, mozzarella e una varietà di verdure fresche di stagione.",
+          "ingredienti": ["Pomodoro", "Mozzarella", "Verdure di stagione"],
+          "categoria": "pizze",
+          "prezzo": 8.00
+        },
+        {
+          "id": 19,
+          "nome": "Marinara",
+          "anteprima": "Semplicità e gusto.",
+          "descrizione": "Pizza con pomodoro, aglio, origano e olio d'oliva. Un classico della tradizione napoletana.",
+          "ingredienti": ["Pomodoro", "Aglio", "Origano", "Olio d'oliva"],
+          "categoria": "pizze",
+          "prezzo": 6.50
+        },
+        {
+          "id": 20,
+          "nome": "Bufalina",
+          "anteprima": "Sapori autentici.",
+          "descrizione": "Pizza con pomodoro, mozzarella di bufala e basilico. Un'esperienza di gusto unica.",
+          "ingredienti": ["Pomodoro", "Mozzarella di bufala", "Basilico"],
+          "categoria": "pizze",
+          "prezzo": 9.00
+        },
+    
+        {
+          "id": 21,
+          "nome": "Patatine Classiche",
+          "anteprima": "Il contorno perfetto.",
+          "descrizione": "Patatine fritte croccanti e salate. Ideal2i per accompagnare qualsiasi piatto.",
+          "ingredienti": ["Patate", "Olio", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 3.50
+        },
+        {
+          "id": 22,
+          "nome": "Patatine Rustiche",
+          "anteprima": "Gusto rustico.",
+          "descrizione": "Patatine tagliate spesse e fritte con la buccia. Un sapore genuino e autentico.",
+          "ingredienti": ["Patate con buccia", "Olio", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.00
+        },
+        {
+          "id": 23,
+          "nome": "Patatine al Formaggio",
+          "anteprima": "Una delizia cremosa.",
+          "descrizione": "Patatine fritte ricoperte di formaggio fuso. Una combinazione irresistibile.",
+          "ingredienti": ["Patate", "Olio", "Formaggio", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.50
+        },
+        {
+          "id": 24,
+          "nome": "Patatine al Peperoncino",
+          "anteprima": "Un tocco piccante.",
+          "descrizione": "Patatine fritte condite con peperoncino e spezie. Per chi ama il piccante.",
+          "ingredienti": ["Patate", "Olio", "Peperoncino", "Spezie", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.00
+        },
+        {
+          "id": 25,
+          "nome": "Patatine Dolce e Piccante",
+          "anteprima": "Contrasto di sapori.",
+          "descrizione": "Patatine fritte con una combinazione di dolce e piccante. Un'esperienza di gusto unica.",
+          "ingredienti": ["Patate", "Olio", "Zucchero", "Peperoncino", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.50
+        },
+        {
+          "id": 26,
+          "nome": "Patatine con Bacon",
+          "anteprima": "Ricchezza e gusto.",
+          "descrizione": "Patatine fritte ricoperte di pezzetti di bacon croccante. Un'esplosione di sapore.",
+          "ingredienti": ["Patate", "Olio", "Bacon", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 5.00
+        },
+        {
+          "id": 27,
+          "nome": "Patatine al Tartufo",
+          "anteprima": "Eleganza e raffinatezza.",
+          "descrizione": "Patatine fritte condite con olio al tartufo. Un'esperienza di gusto raffinata.",
+          "ingredienti": ["Patate", "Olio", "Olio al tartufo", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 6.00
+        },
+        {
+          "id": 28,
+          "nome": "Patatine con Erbe Aromatiche",
+          "anteprima": "Freschezza naturale.",
+          "descrizione": "Patatine fritte condite con un mix di erbe aromatiche. Un gusto fresco e delizioso.",
+          "ingredienti": ["Patate", "Olio", "Erbe aromatiche", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.00
+        },
+        {
+          "id": 29,
+          "nome": "Patatine con Salsa BBQ",
+          "anteprima": "Un tocco americano.",
+          "descrizione": "Patatine fritte servite con una salsa barbecue dolce e affumicata. Un abbinamento perfetto.",
+          "ingredienti": ["Patate", "Olio", "Salsa BBQ", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.50
+        },
+        {
+          "id": 30,
+          "nome": "Patatine con Salsa allo Yogurt",
+          "anteprima": "Fresche e leggere.",
+          "descrizione": "Patatine fritte servite con una salsa allo yogurt. Un abbinamento fresco e leggero.",
+          "ingredienti": ["Patate", "Olio", "Salsa allo yogurt", "Sale"],
+          "categoria": "patatine",
+          "prezzo": 4.50
+        },
+     
+        {
+          "id": 31,
+          "nome": "Nigiri al Salmone",
+          "anteprima": "Un classico giapponese.",
+          "descrizione": "Riso pressato con una fetta di salmone fresco sopra. Semplice e delizioso.",
+          "ingredienti": ["Riso", "Salmone", "Wasabi"],
+          "categoria": "sushi",
+          "prezzo": 6.00
+        },
+        {
+          "id": 32,
+          "nome": "Nigiri al Tonno",
+          "anteprima": "Gusto puro.",
+          "descrizione": "Riso pressato con una fetta di tonno fresco sopra. Un sapore autentico.",
+          "ingredienti": ["Riso", "Tonno", "Wasabi"],
+          "categoria": "sushi",
+          "prezzo": 6.50
+        },
+        {
+          "id": 33,
+          "nome": "Uramaki California",
+          "anteprima": "Un tocco di California.",
+          "descrizione": "Roll con riso all'esterno, ripieno di granchio, avocado e cetriolo. Un classico amato da tutti.",
+          "ingredienti": ["Riso", "Granchio", "Avocado", "Cetriolo", "Semi di sesamo"],
+          "categoria": "sushi",
+          "prezzo": 8.00
+        },
+        {
+          "id": 34,
+          "nome": "Uramaki Philadelphia",
+          "anteprima": "Cremoso e gustoso.",
+          "descrizione": "Roll con riso all'esterno, ripieno di salmone, avocado e formaggio Philadelphia. Un mix cremoso e delizioso.",
+          "ingredienti": ["Riso", "Salmone", "Avocado", "Formaggio Philadelphia"],
+          "categoria": "sushi",
+          "prezzo": 8.50
+        },
+        {
+          "id": 35,
+          "nome": "Sashimi Misto",
+          "anteprima": "Freschezza pura.",
+          "descrizione": "Una selezione di pesce fresco tagliato a fette sottili. Per chi ama il gusto del pesce crudo.",
+          "ingredienti": ["Salmone", "Tonno", "Branzino", "Gamberi"],
+          "categoria": "sushi",
+          "prezzo": 12.00
+        },
+        {
+          "id": 36,
+          "nome": "Temaki Salmone",
+          "anteprima": "Praticità e gusto.",
+          "descrizione": "Cono di alga nori ripieno di riso, salmone e avocado. Un sushi facile da mangiare.",
+          "ingredienti": ["Alga nori", "Riso", "Salmone", "Avocado"],
+          "categoria": "sushi",
+          "prezzo": 6.50
+        },
+        {
+          "id": 37,
+          "nome": "Temaki Tonno",
+          "anteprima": "Gusto e praticità.",
+          "descrizione": "Cono di alga nori ripieno di riso, tonno e cetriolo. Un sushi facile da gustare.",
+          "ingredienti": ["Alga nori", "Riso", "Tonno", "Cetriolo"],
+          "categoria": "sushi",
+          "prezzo": 7.00
+        },
+        {
+          "id": 38,
+          "nome": "Hosomaki Avocado",
+          "anteprima": "Semplice e delicato.",
+          "descrizione": "Roll piccolo con alga nori all'esterno e ripieno di riso e avocado. Un gusto delicato.",
+          "ingredienti": ["Alga nori", "Riso", "Avocado"],
+          "categoria": "sushi",
+          "prezzo": 5.50
+        },
+        {
+          "id": 39,
+          "nome": "Hosomaki Cetriolo",
+          "anteprima": "Freschezza e semplicità.",
+          "descrizione": "Roll piccolo con alga nori all'esterno e ripieno di riso e cetriolo. Un gusto fresco e leggero.",
+          "ingredienti": ["Alga nori", "Riso", "Cetriolo"],
+          "categoria": "sushi",
+          "prezzo": 5.00
+        },
+        {
+          "id": 40,
+          "nome": "Chirashi",
+          "anteprima": "Un'esplosione di sapori.",
+          "descrizione": "Ciotola di riso sushi ricoperta di pesce crudo misto e verdure. Un piatto ricco e completo.",
+          "ingredienti": ["Riso", "Salmone", "Tonno", "Branzino", "Verdure"],
+          "categoria": "sushi",
+          "prezzo": 10.00
+        },
+    
+        {
+          "id": 41,
+          "nome": "Gelato al Cioccolato",
+          "anteprima": "Un classico intramontabile.",
+          "descrizione": "Gelato cremoso al cioccolato fondente. Per gli amanti del cioccolato in tutte le sue forme.",
+          "ingredienti": ["Latte", "Zucchero", "Cioccolato fondente", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.00
+        },
+        {
+          "id": 42,
+          "nome": "Gelato alla Vaniglia",
+          "anteprima": "Delicato e profumato.",
+          "descrizione": "Gelato cremoso alla vaniglia. Un gusto classico e delicato, amato da grandi e piccini.",
+          "ingredienti": ["Latte", "Zucchero", "Vaniglia", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.00
+        },
+        {
+          "id": 43,
+          "nome": "Gelato alla Fragola",
+          "anteprima": "Fresco e fruttato.",
+          "descrizione": "Gelato alla fragola fatto con fragole fresche. Un'esplosione di freschezza e sapore.",
+          "ingredienti": ["Latte", "Zucchero", "Fragole", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.00
+        },
+        {
+          "id": 44,
+          "nome": "Gelato al Pistacchio",
+          "anteprima": "Ricco e cremoso.",
+          "descrizione": "Gelato al pistacchio con vera pasta di pistacchio. Un gusto ricco e sofisticato.",
+          "ingredienti": ["Latte", "Zucchero", "Pasta di pistacchio", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.50
+        },
+        {
+          "id": 45,
+          "nome": "Gelato al Limone",
+          "anteprima": "Freschezza estiva.",
+          "descrizione": "Gelato al limone rinfrescante e leggero. Perfetto per le giornate calde.",
+          "ingredienti": ["Latte", "Zucchero", "Succo di limone", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.00
+        },
+        {
+          "id": 46,
+          "nome": "Gelato alla Nocciola",
+          "anteprima": "Dolcezza e croccantezza.",
+          "descrizione": "Gelato alla nocciola con pezzetti di nocciola croccante. Un piacere per il palato.",
+          "ingredienti": ["Latte", "Zucchero", "Pasta di nocciola", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.50
+        },
+        {
+          "id": 47,
+          "nome": "Gelato alla Menta",
+          "anteprima": "Rinfrescante e delizioso.",
+          "descrizione": "Gelato alla menta con gocce di cioccolato. Un mix di freschezza e dolcezza.",
+          "ingredienti": ["Latte", "Zucchero", "Menta", "Gocce di cioccolato", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.50
+        },
+        {
+          "id": 48,
+          "nome": "Gelato al Caffè",
+          "anteprima": "Energizzante e cremoso.",
+          "descrizione": "Gelato al caffè fatto con vero caffè espresso. Un gusto deciso e avvolgente.",
+          "ingredienti": ["Latte", "Zucchero", "Caffè espresso", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.50
+        },
+        {
+          "id": 49,
+          "nome": "Gelato al Caramello",
+          "anteprima": "Dolcezza irresistibile.",
+          "descrizione": "Gelato al caramello con salsa al caramello. Un piacere dolce e avvolgente.",
+          "ingredienti": ["Latte", "Zucchero", "Caramello", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.50
+        },
+        {
+          "id": 50,
+          "nome": "Gelato al Cocco",
+          "anteprima": "Esotico e cremoso.",
+          "descrizione": "Gelato al cocco con scaglie di cocco. Un gusto esotico e rinfrescante.",
+          "ingredienti": ["Latte", "Zucchero", "Cocco", "Panna"],
+          "categoria": "gelati",
+          "prezzo": 3.50
+        }
+  ]
+
+    

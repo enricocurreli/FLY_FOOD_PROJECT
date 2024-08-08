@@ -6,7 +6,7 @@
           "anteprima": "Un classico intramontabile.",
           "descrizione": "Panino con prosciutto, formaggio, lattuga e pomodoro. Perfetto per una pausa pranzo veloce e gustosa.",
           "ingredienti": ["Pane", "Prosciutto", "Formaggio", "Lattuga", "Pomodoro"],
-          "categoria": "panini",
+          "categoria": "Panini",
           "prezzo": 5.00
         },
         {
@@ -15,7 +15,7 @@
           "anteprima": "Delizioso e salutare.",
           "descrizione": "Panino con verdure grigliate, formaggio di capra e pesto. Un'opzione perfetta per i vegetariani.",
           "ingredienti": ["Pane", "Verdure grigliate", "Formaggio di capra", "Pesto"],
-          "categoria": "panini",
+          "categoria": "Panini",
           "prezzo": 6.50
         },
         {

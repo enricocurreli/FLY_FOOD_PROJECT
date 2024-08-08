@@ -15,7 +15,7 @@ const Card = ({post}) => {
           <img src={imgHeader} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <div className="badge badge-secondary">TOP</div>
+          <div className="badge badge-secondary">{post.categoria}</div>
           <h2 className="card-title">{post.nome}</h2>
           <p>{post.anteprima}</p>
           <div className="card-actions justify-end">

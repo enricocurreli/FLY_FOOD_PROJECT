@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Button = ({text}) => {
+const Button = ({text, callback}) => {
 
   
   
   return (
     
-    <button className="btn btn-primary rounded-full" > {text}</button>
+    <button className="btn btn-primary rounded-full" onClick={callback} > {text}</button>
 
   )
 }

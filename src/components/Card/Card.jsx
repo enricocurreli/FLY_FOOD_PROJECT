@@ -1,12 +1,11 @@
 import React from "react";
 import imgHeader from "../../assets/imgHeader.jpg";
-import { IoArrowForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
-const Card = ({post}) => {
+const Card = ({post, btnText}) => {
 
-  const btnText = <IoArrowForwardOutline />
+  
 
   return (
     <div className="w-full md:w-1/5 m-14 md:m-20 flex justify-center md:justify-between">
@@ -20,7 +19,7 @@ const Card = ({post}) => {
           <p>{post.anteprima}</p>
           <div className="card-actions justify-end">
 
-            <Link to={`/detail/`}>
+            <Link to={`/detail/${post.id}`} post={post}>
               <Button text={btnText}></Button>
            </Link>
 
@@ -32,3 +31,5 @@ const Card = ({post}) => {
 };
 
 export default Card;
+
+

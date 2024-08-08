@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card/Card";
 import Button from "../components/Button/Button";
-import { json } from "react-router-dom";
+import { IoArrowForwardOutline } from "react-icons/io5";
 
-// import { useLoaderData } from 'react-router-dom';
 
 const Menu = () => {
   
@@ -81,6 +80,7 @@ const Menu = () => {
   const text4 = "Patatine";
   const text5 = "Gelati";
   const text6 = "Panini";
+  const btnText = <IoArrowForwardOutline />
 
   return (
     <>
@@ -109,32 +109,10 @@ const Menu = () => {
       </div>
       <div className="flex justify-center my-16 ">
         <div className="container flex justify-center flex-wrap rounded-3xl bg-orange-300">
-            {/* {!sushi && !pizze && !panini &&
-            posts &&
-            posts.map((post) => {
-              return <Card key={post.id} post={post} />;
-            })}
-          
-            {panini &&
-            posts.filter((post) => post.categoria === "Panini").map((post) => {
-              return <Card key={post.id} post={post} />;
-            })}
-          
-            {
-              pizze && 
-              posts.filter((post) => post.categoria === "Pizze").map((post) => {
-                return <Card post={post} key={post.id}/>
-              
-            })}
-             {
-              sushi && 
-              posts.filter((post) => post.categoria === "Sushi").map((post) => {
-                return <Card post={post} key={post.id}/>
-              
-            })} */}
+
             {
               filteredPosts && filteredPosts.map((post) => {
-                return <Card post={post} key={post.id}/>
+                return <Card post={post} key={post.id} btnText={btnText}/>
               
             }) 
             }

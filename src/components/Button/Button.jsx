@@ -12,3 +12,4 @@ const Button = ({text, callback}) => {
 }
 
 export default Button;
+

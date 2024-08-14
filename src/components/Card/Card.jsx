@@ -2,10 +2,16 @@ import React from "react";
 import imgHeader from "../../assets/imgHeader.jpg";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
+import { IoCloseOutline } from "react-icons/io5";
+import { FaOpencart } from "react-icons/fa6";
 
-const Card = ({post, btnText}) => {
-
+const Card = ({ post, btnText }) => {
   
+  const handleModal  = ()=> document.getElementById(`${post.id}`).showModal()
+  const { ingredienti } = post;
+ 
+  let textClose = <IoCloseOutline />;
+  let addCart = <FaOpencart />
 
   return (
     <div className="w-full md:w-1/5 m-14 md:m-20 flex justify-center md:justify-between">
@@ -17,12 +23,34 @@ const Card = ({post, btnText}) => {
           <div className="badge badge-secondary">{post.categoria}</div>
           <h2 className="card-title">{post.nome}</h2>
           <p>{post.anteprima}</p>
-          <div className="card-actions justify-end">
+          <div className="card-actions justify-start">
 
-            <Link to={`/detail/${post.id}`} post={post}>
-              <Button text={btnText}></Button>
-           </Link>
-
+            {/* Open the modal using document.getElementById('ID').showModal() method */}
+            <Button callback={ handleModal} text={btnText}></Button>
+            <dialog
+              id={post.id}
+              className="modal  text-black"
+            >
+              <div className="modal-box ">
+                <div className="card-body p-2">
+                  <h3 className="card-title">{post.descrizione}</h3>
+                  <h5 className="font-semibold mt-2">Ingredienti: </h5>
+                  <ul>
+                    {ingredienti.map((el, i) => {
+                      return <li key={el.id}>{i +1}. {el}</li>;
+                    })}
+                  </ul>
+                  <h5 className="font-semibold mt-2">Prezzo: <span className="font-normal">{post.prezzo}€</span> </h5>
+                </div>
+                <div className="modal-action">
+                <Button text={addCart}/>
+                  <form method="dialog" >
+                    {/* if there is a button in form, it will close the modal */}
+                    <Button text={textClose}/>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
@@ -31,5 +59,3 @@ const Card = ({post, btnText}) => {
 };
 
 export default Card;
-
-

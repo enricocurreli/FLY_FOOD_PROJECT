@@ -3,7 +3,7 @@ import imgHeader from "../../assets/imgHeader.jpg";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { IoCloseOutline } from "react-icons/io5";
-import { FaOpencart } from "react-icons/fa6";
+
 
 const Card = ({ post, btnText }) => {
   
@@ -11,7 +11,6 @@ const Card = ({ post, btnText }) => {
   const { ingredienti } = post;
  
   let textClose = <IoCloseOutline />;
-  let addCart = <FaOpencart />
 
   return (
     <div className="w-full md:w-1/5 m-14 md:m-20 flex justify-center md:justify-between">
@@ -42,8 +41,8 @@ const Card = ({ post, btnText }) => {
                   </ul>
                   <h5 className="font-semibold mt-2">Prezzo: <span className="font-normal">{post.prezzo}€</span> </h5>
                 </div>
-                <div className="modal-action">
-                <Button text={addCart}/>
+                <div className="modal-action d-flex justify-between">
+                <Button text={"Aggiungi"}/>
                   <form method="dialog" >
                     {/* if there is a button in form, it will close the modal */}
                     <Button text={textClose}/>

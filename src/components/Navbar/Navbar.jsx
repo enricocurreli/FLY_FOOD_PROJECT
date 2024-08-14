@@ -65,14 +65,14 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to={routes.menu}>MENU</Link>
-                <ul className="p-2">
+                {/* <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
                   </li>
                   <li>
                     <a>Submenu 2</a>
                   </li>
-                </ul>
+                </ul> */}
               </li>
               <li>
                 <Link>CONTACT</Link>
@@ -113,14 +113,17 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className=" btn bg-primary rounded-full text-3xl text-white" onMouseOver={() => document.getElementById("my_modal_5").showModal()}>
+        <div className="indicator">
+        <span className="indicator-item badge badge-secondary p-3">0</span>
+          <Link className=" btn bg-primary rounded-full text-3xl text-white" onMouseOver={() => document.getElementById("myCart").showModal()}>
             <FaOpencart />
           </Link>
+        </div>
         </div>
       </div>
 
 
-      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+      <dialog id="myCart" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg">CART</h3>
           <p className="py-4">

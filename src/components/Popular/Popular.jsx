@@ -8,8 +8,8 @@ const Popular = () => {
     <>
    <div className="flex justify-center mt-28">
        <div className="container flex flex-wrap">
-            <div className='w-full md:w-1/4'>
-                <h1 className='text-4xl font-bold text-center'>Last <span className='text-4xl font-extralight'>News</span></h1> 
+            <div className='w-full'>
+                <h1 className='text-6xl font-bold text-center'>International <span className='text-6xl font-extralight px-6'>Cuisine</span></h1> 
             </div>
        </div>
 
@@ -19,9 +19,7 @@ const Popular = () => {
       
         <div className='container flex justify-center flex-wrap rounded-3xl bg-orange-300'>
 
-        {/* <CardHome />
-        <CardHome />
-        <CardHome /> */}
+       
 
         </div>
       

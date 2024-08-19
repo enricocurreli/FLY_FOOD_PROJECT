@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa6";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Navbar.css";
 import hamburger from "../../assets/hamburger1.png";
 import routes from "../../router/routes";
+import { CartContext } from "../../contexts/Context";
+import Button from "../Button/Button";
 
 const Navbar = () => {
+
+  const { cart, removeFromCart } = useContext(CartContext);
+
+  const prezzo = cart.map((post) => post.prezzo);
+
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -74,9 +81,9 @@ const Navbar = () => {
                   </li>
                 </ul> */}
               </li>
-              <li>
+              {/* <li>
                 <Link>CONTACT</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="container w-32">
@@ -107,33 +114,68 @@ const Navbar = () => {
             <li>
               <Link to={routes.menu}>MENU</Link>
             </li>
-            <li>
+            {/* <li>
               <Link>CONTACT</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="navbar-end">
-        <div className="indicator">
-        <span className="indicator-item badge badge-secondary p-3">0</span>
-          <Link className=" btn bg-primary rounded-full text-3xl text-white" onMouseOver={() => document.getElementById("myCart").showModal()}>
-            <FaOpencart />
-          </Link>
-        </div>
+          <div className="indicator">
+            <span className="indicator-item badge badge-secondary p-3">
+              {cart.length}
+            </span>
+            <Link
+              className=" btn bg-primary rounded-full text-3xl text-white"
+              onMouseOver={() => document.getElementById("myCart").showModal()}
+            >
+              <FaOpencart />
+            </Link>
+          </div>
         </div>
       </div>
 
+      {/* CARRELLO  */}
+      <dialog id="myCart" className="modal">
+        <div className="modal-box w-11/12 max-w-xl">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost text-slate-800 absolute  right-3 top-3">
+              ✕
+            </button>
+          </form>
+          <h3 className="font-bold text-lg p-3">CARRELLO</h3>
+          {cart &&
+            cart.map((post) => {
+              return (
+                <>
+                  <div className="modal-box shadow-none" key={post.id}>
+                    <div className=" p-2 flex justify-between">
+                      <h3 className="card-title">{post.nome}</h3>
+                      <h5 className="font-semibold mt-2 p-2 px-10">
+                        Quantità:{" "}
+                        <span className="font-normal ">
+                          {post.quantita} x {post.prezzo}€{" "}
+                        </span>{" "}
+                      </h5>
+                      <h5 className="font-semibold mt-2 p-2">
+                        Totale:{" "}
+                        <span className="font-normal">{post.totale}€</span>{" "}
+                      </h5>
+                      <div className="p-3"><Button text={"Rimuovi"} callback={() => removeFromCart(post)}/></div>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          <h5 className=" mt-10 p-4 font-normal ">
+            TOTALE:{" "}
+            <span className="font-semibold text-2xl">
+              {cart.reduce((acc, item) => acc + item.totale, 0)}€
+            </span>{" "}
+          </h5>
 
-      <dialog id="myCart" className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">CART</h3>
-          <p className="py-4">
-            Press ESC key or click the button below to close
-          </p>
           <div className="modal-action">
-            <form method="dialog">
-              {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
-            </form>
+            <Button text={"Conferma Ordine"} />
           </div>
         </div>
       </dialog>

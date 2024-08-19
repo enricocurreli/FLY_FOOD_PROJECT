@@ -87,7 +87,7 @@ const Menu = () => {
       <div className="flex justify-center mt-32 lg:mt-72">
         <div className="container justify-center lg:justify-start flex flex-wrap">
           <h1 className="text-4xl text-center font-bold lg:px-10 xl:px-0 ">
-            Popular <span className="text-4xl font-extralight">Caterory</span>
+            Popular <span className="text-4xl font-extralight">Category</span>
           </h1>
         </div>
       </div>

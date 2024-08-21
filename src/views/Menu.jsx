@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "../components/Card/Card";
 import Button from "../components/Button/Button";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import useFetch from "../hooks/useFetch";
 
 
 const Menu = () => {
@@ -10,7 +11,7 @@ const Menu = () => {
   const [filteredPosts, setFilteredPosts] = useState();
 
   const getPosts = async () => {
-    const promise = await fetch("/public/data.json");
+    const promise = await fetch("/src/data.json");
     const json = await promise.json();
     setPosts(json);
     setFilteredPosts(json);
@@ -21,6 +22,8 @@ const Menu = () => {
   }, []);
 
 
+
+  
   // TUTTE
   const AllCategory = () => {
   
@@ -34,6 +37,15 @@ const Menu = () => {
     let filtered = posts.filter((post)=> post.categoria === "Panini")
     setFilteredPosts(filtered);
   };
+
+  // BURGER
+  
+  const handleBurger = () => {
+  
+      let filtered = posts.filter((post)=> post.categoria === "Burger")
+      setFilteredPosts(filtered);
+  };
+
 
   // PIZZE
 
@@ -80,11 +92,12 @@ const Menu = () => {
   const text4 = "Patatine";
   const text5 = "Gelati";
   const text6 = "Panini";
+  const text7 = "Burger";
   const btnText = <IoArrowForwardOutline />
 
   return (
     <>
-      <div className="flex justify-center mt-32 lg:mt-72">
+      <div className="flex justify-center mt-32 lg:mt-56">
         <div className="container justify-center lg:justify-start flex flex-wrap">
           <h1 className="text-4xl text-center font-bold lg:px-10 xl:px-0 ">
             Popular <span className="text-4xl font-extralight">Category</span>
@@ -92,11 +105,13 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex justify-center mt-14">
-        <div className="container flex flex-wrap gap-9 lg:gap-1  justify-evenly">
+        <div className="container flex flex-wrap gap-7 lg:gap-1  justify-evenly">
           {/* ALL */}
           <Button text={text1} callback={AllCategory} />
           {/* PANINI */}
           <Button text={text6} callback={handlePanini} />
+          {/* BURGER */}
+          <Button text={text7} callback={handleBurger} />
           {/* PIZZE */}
           <Button text={text2} callback={handlePizze} />
           {/* SUSHI */}
@@ -108,13 +123,13 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex justify-center my-16 ">
-        <div className="container flex justify-center flex-wrap rounded-3xl bg-orange-300">
+        <div className="container flex justify-center flex-wrap rounded-3xl bg-orange-200 shadow-lg">
 
             {
-              filteredPosts && filteredPosts.map((post) => {
+              filteredPosts && filteredPosts.sort((item, element) => item.prezzo - element.prezzo).map((post) => {
                 return <Card post={post} key={post.id} btnText={btnText}/>
               
-            }) 
+            })
             }
         </div>
       </div>

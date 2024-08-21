@@ -1,0 +1,12 @@
+
+.myShadow{
+
+    border-top-right-radius: 100px !important;
+    box-shadow: 22px 20px 48px 0px rgba(0, 0, 0, 0.661) !important;
+}
+
+
+.card{
+    clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
+    scale: 102%;
+}

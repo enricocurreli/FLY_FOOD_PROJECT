@@ -1,24 +1,14 @@
 import { createContext, useState, useEffect } from "react";
+import useFetch from "../hooks/useFetch";
 
 export const CartContext = createContext();
 
 
 const CartContextProvider = ({children}) => {
     
-    const [posts, setPosts] = useState();
-    const [cart, setCart] = useState([])
-
-    const getPosts = async () => {
-      const promise = await fetch("/public/data.json");
-      const json = await promise.json();
-      setPosts(json);
-    };
-  
-    useEffect(() => {
-      getPosts();
-    }, []);
-
-
+   
+    const [cart, setCart] = useState([]);
+    const posts = useFetch("/src/data.json");
 
     const handleCart = (posts)=>{
         

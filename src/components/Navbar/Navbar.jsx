@@ -1,49 +1,53 @@
 import { Link } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa6";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import "./Navbar.css";
 import hamburger from "../../assets/hamburger1.png";
 import routes from "../../router/routes";
 import { CartContext } from "../../contexts/Context";
 import Button from "../Button/Button";
+import useScroll from "../../hooks/useScroll";
 
 const Navbar = () => {
 
   const { cart, removeFromCart } = useContext(CartContext);
+  const openModalCart = () => document.getElementById("myCart").showModal()
 
-  const prezzo = cart.map((post) => post.prezzo);
+  // const [scrolled, setScrolled] = useState(false);
 
-  const [scrolled, setScrolled] = useState(false);
+  // const handleScroll = () => {
+  //   const offset = window.scrollY;
+  //   if (offset > 80) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
 
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 80) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // let navbarClasses = [];
+  // if (scrolled) {
+  //   navbarClasses.push("scrolled");
+  // }
+  const [scrolled, scrollY] = useScroll();
 
-  let navbarClasses = [];
-  if (scrolled) {
-    navbarClasses.push("scrolled");
-  }
+  //! scrolledY è il nome di una mia classe
 
   return (
     <>
-      <div
+      <div ref={scrolled}
         className={
-          "navbar bg-cyan-900  text-zinc-100 w-full transition py-3 px-5 " +
-          navbarClasses.join(" ")
+          (scrollY > 80 ? "scrolledY" : " ") + " navbar bg-cyan-900  text-zinc-100 w-full transition py-3 px-5"
         }
+          // + navbarClasses.join(" ")
+        
       >
         <div className="navbar-start">
           <div className="dropdown">
@@ -65,13 +69,13 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-cyan-900  bg-primary text-zinc-100 rounded-box z-[1] mt-7 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-cyan-900  bg-orange-400 text-zinc-100 rounded-box z-[1] mt-7 w-52 p-2 shadow"
             >
               <li>
-                <Link to={routes.home}>HOME</Link>
+                <Link to={routes.home} className="linkNav">HOME</Link>
               </li>
               <li>
-                <Link to={routes.menu}>MENU</Link>
+                <Link to={routes.menu} className="linkNav">MENU</Link>
                 {/* <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -96,7 +100,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to={routes.home}>HOME</Link>
+              <Link to={routes.home} className="linkNav">HOME</Link>
             </li>
             {/* <li>
             <details>
@@ -112,31 +116,26 @@ const Navbar = () => {
             </details>
           </li> */}
             <li>
-              <Link to={routes.menu}>MENU</Link>
+              <Link to={routes.menu} className="linkNav">MENU</Link>
             </li>
             {/* <li>
               <Link>CONTACT</Link>
             </li> */}
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end pe-7">
           <div className="indicator">
-            <span className="indicator-item badge badge-secondary p-3">
+            <span className="indicator-item indicator-bottom badge badge-secondary p-3 py-4">
               {cart.length}
             </span>
-            <Link
-              className=" btn bg-primary rounded-full text-3xl text-white"
-              onMouseOver={() => document.getElementById("myCart").showModal()}
-            >
-              <FaOpencart />
-            </Link>
+            <Button text={<FaOpencart />} mouseOver={()=>openModalCart()} classes={"btn bg-orange-400 rounded-full text-3xl text-white border-white "}></Button>
           </div>
         </div>
       </div>
 
       {/* CARRELLO  */}
       <dialog id="myCart" className="modal">
-        <div className="modal-box w-11/12 max-w-xl">
+        <div className="modal-box w-11/12 max-w-2xl">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost text-slate-800 absolute  right-3 top-3">
@@ -149,7 +148,7 @@ const Navbar = () => {
               return (
                 <>
                   <div className="modal-box shadow-none" key={post.id}>
-                    <div className=" p-2 flex justify-between">
+                    <div className=" p-2 flex justify-between max-w-xl">
                       <h3 className="card-title">{post.nome}</h3>
                       <h5 className="font-semibold mt-2 p-2 px-10">
                         Quantità:{" "}

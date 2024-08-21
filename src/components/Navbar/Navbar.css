@@ -3,42 +3,84 @@
     width: 100%;
     top: 0;
     left: 0;
-    margin: 2% 0% 0% 10%;
-    backdrop-filter: blur(10px);
-    border-radius: 40px;
-    width: 80% !important;
+    border-end-end-radius: 10px; 
+    border-end-start-radius: 10px;
     z-index: 99;
     
 }
 
-  .scrolled {
+.scrolledY {
       
-    background-color: #ffd562;
-    margin: 2% 0% 0% 25%;
-    background-color: black !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid ;
-    border-radius: 40px;
-    width: 50% !important;
+  background-color: #ffd562;
+  margin: 1% 0% 0% 25%;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  background-color: #0a446bc7!important;
+  backdrop-filter: blur(10px);
+  border: 1px solid ;
+  border-radius: 40px;
+  width: 50% !important;
+}
+
+.linkNav{
+  position: relative;
+  color: white;
+
+}
+
+.linkNav:focus{
+
+  color: white !important;
+  background-color: transparent !important;
+}
+.linkNav:active{
+
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.linkNav::before{
+  
+  border-radius: 50px;
+  bottom: 0;
+  left: 23%;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fb923c;
+  transition: .3s;
+}
+.linkNav:hover{
+
+  background-color: transparent !important;
+}
+
+.linkNav:hover:before{
+
+  width: 55%;
 }
 
 @media screen and (max-width: 700px) {
   
   .navbar {
-    margin-left:8%;
-    margin-top: 3%;
-    width: 85% !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-end-end-radius: 10px; 
+    border-end-start-radius: 10px;
+    z-index: 99;
     
-  
     
 }
 
-  .scrolled {
+  .scrolledY {
         
       background-color: #ffd562;
       margin-top: 5%;
       margin-left: 23%;
-      background-color: black !important;
+      background-color: rgba(10, 68, 107, 0.779)!important;
       backdrop-filter: blur(10px);
       border: 1px solid ;
       border-radius: 40px;

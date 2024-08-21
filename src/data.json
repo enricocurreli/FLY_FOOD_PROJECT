@@ -502,6 +502,106 @@
           "img": "/src/assets/gelato.jpg",
           "categoria": "Gelati",
           "prezzo": 3.50
+        },
+        {
+          "id": 51,
+          "nome": "Classic Burger",
+          "anteprima": "Il classico intramontabile.",
+          "descrizione": "Burger di manzo succoso con lattuga, pomodoro, cipolla e salsa speciale. Un vero classico che non delude mai.",
+          "ingredienti": ["Manzo", "Lattuga", "Pomodoro", "Cipolla", "Salsa speciale", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 7.50
+        },
+        {
+          "id": 52,
+          "nome": "Cheeseburger",
+          "anteprima": "Un'esplosione di formaggio.",
+          "descrizione": "Burger di manzo con formaggio cheddar fuso, lattuga, pomodoro e salsa. Per gli amanti del formaggio.",
+          "ingredienti": ["Manzo", "Cheddar", "Lattuga", "Pomodoro", "Salsa", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 8.00
+        },
+        {
+          "id": 53,
+          "nome": "Bacon Burger",
+          "anteprima": "Ricco di sapore.",
+          "descrizione": "Burger di manzo con croccanti fette di bacon, formaggio cheddar, lattuga e salsa barbecue. Un'esperienza ricca e gustosa.",
+          "ingredienti": ["Manzo", "Bacon", "Cheddar", "Lattuga", "Salsa barbecue", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 9.00
+        },
+        {
+          "id": 54,
+          "nome": "Mushroom Swiss Burger",
+          "anteprima": "Sapore sofisticato.",
+          "descrizione": "Burger di manzo con funghi saltati, formaggio svizzero, cipolle caramellate e salsa aioli. Per un gusto sofisticato.",
+          "ingredienti": ["Manzo", "Funghi", "Formaggio svizzero", "Cipolle caramellate", "Salsa aioli", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 9.50
+        },
+        {
+          "id": 55,
+          "nome": "BBQ Burger",
+          "anteprima": "Un'esplosione di gusto.",
+          "descrizione": "Burger di manzo con formaggio cheddar, cipolla croccante, bacon e salsa barbecue. Un mix di sapori intensi.",
+          "ingredienti": ["Manzo", "Cheddar", "Cipolla croccante", "Bacon", "Salsa barbecue", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 8.50
+        },
+        {
+          "id": 56,
+          "nome": "Spicy Jalapeño Burger",
+          "anteprima": "Per chi ama il piccante.",
+          "descrizione": "Burger di manzo con jalapeño, formaggio peperjack, lattuga e salsa piccante. Un'esplosione di sapore piccante.",
+          "ingredienti": ["Manzo", "Jalapeño", "Formaggio peperjack", "Lattuga", "Salsa piccante", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 8.50
+        },
+        {
+          "id": 57,
+          "nome": "Avocado Burger",
+          "anteprima": "Fresco e cremoso.",
+          "descrizione": "Burger di manzo con fette di avocado, lattuga, pomodoro, cipolla e salsa aioli. Un tocco fresco e cremoso.",
+          "ingredienti": ["Manzo", "Avocado", "Lattuga", "Pomodoro", "Cipolla", "Salsa aioli", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 9.00
+        },
+        {
+          "id": 58,
+          "nome": "Veggie Burger",
+          "anteprima": "Alternativa vegetariana.",
+          "descrizione": "Burger vegetale con lattuga, pomodoro, cipolla, avocado e salsa aioli. Un'opzione deliziosa per i vegetariani.",
+          "ingredienti": ["Burger vegetale", "Lattuga", "Pomodoro", "Cipolla", "Avocado", "Salsa aioli", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 7.50
+        },
+        {
+          "id": 59,
+          "nome": "Double Cheeseburger",
+          "anteprima": "Per i veri affamati.",
+          "descrizione": "Due burger di manzo con doppio formaggio cheddar, lattuga, pomodoro e salsa speciale. Una doppia dose di bontà.",
+          "ingredienti": ["Manzo", "Doppio cheddar", "Lattuga", "Pomodoro", "Salsa speciale", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 10.50
+        },
+        {
+          "id": 60,
+          "nome": "Blue Cheese Burger",
+          "anteprima": "Sapore deciso.",
+          "descrizione": "Burger di manzo con formaggio blue cheese, cipolle caramellate e rucola. Un mix di sapori deciso e gustoso.",
+          "ingredienti": ["Manzo", "Blue cheese", "Cipolle caramellate", "Rucola", "Pane"],
+          "img": "/src/assets/burger.jpg",
+          "categoria": "Burger",
+          "prezzo": 9.50
         }
   ]
 

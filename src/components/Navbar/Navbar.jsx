@@ -135,7 +135,7 @@ const Navbar = () => {
 
       {/* CARRELLO  */}
       <dialog id="myCart" className="modal">
-        <div className="modal-box w-11/12 max-w-2xl">
+        <div className="modal-box w-11/12 max-w-4xl">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost text-slate-800 absolute  right-3 top-3">
@@ -147,20 +147,23 @@ const Navbar = () => {
             cart.map((post) => {
               return (
                 <>
-                  <div className="modal-box shadow-none" key={post.id}>
-                    <div className=" p-2 flex justify-between max-w-xl">
+                  <div className="modal-box shadow-none max-w-5xl" key={post.id}>
+                    <div className=" p-3 flex justify-between max-w-3xl">
                       <h3 className="card-title">{post.nome}</h3>
-                      <h5 className="font-semibold mt-2 p-2 px-10">
+                      <h5 className="font-semibold mt-2 p-3 px-12">
                         Quantità:{" "}
-                        <span className="font-normal ">
+                        <span className="font-normal p-3 ">
                           {post.quantita} x {post.prezzo}€{" "}
                         </span>{" "}
                       </h5>
-                      <h5 className="font-semibold mt-2 p-2">
+                      <h5 className="font-semibold mt-2 p-3">
                         Totale:{" "}
                         <span className="font-normal">{post.totale}€</span>{" "}
                       </h5>
-                      <div className="p-3"><Button text={"Rimuovi"} callback={() => removeFromCart(post)}/></div>
+                      <div className="p-3">
+                        <Button text={"Rimuovi"} callback={() => removeFromCart(post)}/>
+
+                      </div>
                     </div>
                   </div>
                 </>

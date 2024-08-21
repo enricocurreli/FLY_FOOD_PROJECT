@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const useScroll = () => {
   
-    const [scrollY, setScrollY] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
     const ref = useRef()
 
     const handleScroll = () => {

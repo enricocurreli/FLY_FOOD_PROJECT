@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Card from "../components/Card/Card";
 import Button from "../components/Button/Button";
 import { IoArrowForwardOutline } from "react-icons/io5";
@@ -7,22 +7,9 @@ import useFetch from "../hooks/useFetch";
 
 const Menu = () => {
   
-  const [posts, setPosts] = useState();
+  const posts = useFetch("/src/data.json")
   const [filteredPosts, setFilteredPosts] = useState();
-
-  const getPosts = async () => {
-    const promise = await fetch("/src/data.json");
-    const json = await promise.json();
-    setPosts(json);
-    setFilteredPosts(json);
-  };
-
-  useEffect(() => {
-    getPosts();
-  }, []);
-
-
-
+  
   
   // TUTTE
   const AllCategory = () => {
@@ -125,12 +112,18 @@ const Menu = () => {
       <div className="flex justify-center my-16 ">
         <div className="container flex justify-center flex-wrap rounded-3xl bg-orange-200 shadow-lg">
 
-            {
-              filteredPosts && filteredPosts.sort((item, element) => item.prezzo - element.prezzo).map((post) => {
-                return <Card post={post} key={post.id} btnText={btnText}/>
+          {
+            filteredPosts &&
+              filteredPosts.sort((item, element) => item.prezzo - element.prezzo).map((post) => {
+              return <Card post={post} key={post.id} btnText={btnText}/>
               
             })
-            }
+            ||
+            posts && posts.sort((item, element) => item.prezzo - element.prezzo).map((post) => {
+              return <Card post={post} key={post.id} btnText={btnText}/>
+            
+            })
+          }
         </div>
       </div>
     </>

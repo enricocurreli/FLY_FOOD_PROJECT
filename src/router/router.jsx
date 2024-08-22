@@ -3,7 +3,9 @@ import Layout from "../components/Layout";
 import routes from "./routes";
 import Homepage from "../views/Homepage";
 import Menu from "../views/Menu";
-import Detail from "../views/Detail";
+
+import Login from "../views/Login";
+import CheckOut from "../views/CheckOut";
 
 
 
@@ -25,8 +27,13 @@ const router = createBrowserRouter([
                 // loader: postsLoader 
             },
             {
-                path:routes.detail,
-                element: <Detail />,
+                path:routes.login,
+                element: <Login />,
+                 
+            },
+            {
+                path:routes.checkOut,
+                element: <CheckOut />,
                  
             },
         ],

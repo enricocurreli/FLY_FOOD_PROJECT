@@ -38,7 +38,7 @@ const CartContextProvider = ({children}) => {
 
             const existingProduct = prevCart.find(item => item.id === posts.id);
 
-            if (existingProduct && existingProduct.length > 1){
+            if (existingProduct && existingProduct.quantita > 1){
 
                 return prevCart.map(item => {
                     

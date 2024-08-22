@@ -28,11 +28,13 @@ const DropLog = () => {
   };
 
   return (
-    <div className="dropdown dropdown-hover  ">
+
+    <>
+    <div className="dropdown dropdown-hover lg:block hidden">
       <div
         tabIndex={0}
         role="button"
-        className="btn bg-transparent border-none p-0 hover:bg-transparent hover:scale-110"
+        className="btn bg-transparent border-none shadow-none hover:bg-transparent hover:scale-110"
       >
         <Avatar />{" "}
       </div>
@@ -58,6 +60,28 @@ const DropLog = () => {
         )}
       </ul>
     </div>
+    <div className="lg:hidden block flex">
+    <Avatar />{" "}
+    {!logged ? (
+          <li>
+            <Link to={routes.login}>
+              <Button classes={"hover:scale-105 scale-90"} text={"Login"} />
+            </Link>
+          </li>
+        ) : (
+          <li>
+            {" "}
+            <Button
+              classes={"hover:scale-90 scale-75"}
+              text={"SignOut"}
+              callback={() => handleSignOut()}
+            />
+          </li>
+        )}
+    </div>
+    
+    
+    </>
   );
 };
 

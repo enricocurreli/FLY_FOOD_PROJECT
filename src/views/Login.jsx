@@ -11,8 +11,8 @@ const Login = () => {
 
   return (
 
-      <div className="my-48">
-          <div className="flex justify-center mb-16">
+      <div className="my-36 md:mt-52 md:mb-[302px] lg:mt-52 lg:mb-[521px]    ">
+          <div className="flex justify-center mb-16"> 
           <Title classes={"text-6xl text-center font-medium"} tag={"h1"}>{"Login"}{" "}</Title>
         </div>
         <div className="flex justify-center">

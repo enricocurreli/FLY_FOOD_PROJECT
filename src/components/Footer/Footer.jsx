@@ -2,7 +2,7 @@ import hamburger from "../../assets/hamburger1.png";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center bg-cyan-900 text-slate-200 p-10 mt-36">
+    <footer className="footer footer-center bg-cyan-900 text-slate-200 p-10 mt-40">
       <aside>
         <img src={hamburger} className="md:w-14 w-11" />
         <h4 className="lg:block hidden text-center">FLY FOOD</h4>

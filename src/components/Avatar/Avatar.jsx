@@ -4,7 +4,7 @@ import AvatarM from '../../assets/avatar/avatar-96-M.png';
 import AvatarNT from '../../assets/avatar/avatar-96-NT.png';
 import { useContext } from "react";
 import { LoggedContext } from "../../contexts/ContextLog";
-import Title from "../Title/Title";
+
 
 
 const Avatar = () => {
@@ -13,7 +13,7 @@ const Avatar = () => {
    
   return (
     <div className="avatar">
-      <div className="w-11  rounded-full grid gap-y-1 grid-cols-1 d-flex justify-items-center">
+      <div className="w-12  rounded-full grid gap-y-1 grid-cols-1 d-flex justify-items-center">
         {
           logged && select == "Maschio" ? <Img src={AvatarM} alt={"Immagine profilo"}></Img> : null
         }

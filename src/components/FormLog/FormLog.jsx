@@ -28,7 +28,7 @@ const FormLog = () => {
 
   return (
     <>
-      <form className="container w-1/3" onSubmit={handleSubmit}>
+      <form className="container md:w-1/3 w-[80%]" onSubmit={handleSubmit}>
         {logged && <Navigate to={"/"} />}
 
         <label
@@ -99,10 +99,10 @@ const FormLog = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <div className="flex justify-between mt-2">
+        <div className="flex flex-col lg:justify-between gap-3 lg:flex-row mt-2">
           <select className="select select-bordered w-full max-w-xs" onChange={(e) => setSelect(e.target.value)} value={select}>
             <option disabled selected>
-              Seleziona
+              Sesso
             </option>
             <option>Maschio</option>
             <option>Femmina</option>

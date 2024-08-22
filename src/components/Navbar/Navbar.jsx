@@ -43,7 +43,10 @@ const Navbar = () => {
   //   navbarClasses.push("scrolled");
   // }
   const [scrolled, scrollY] = useScroll();
-
+  
+   const quantitaTot = cart.map((el)=>el.quantita).reduce((a,b)=> a+b, 0)
+   
+  
   //! scrolledY è il nome di una mia classe
 
   return (
@@ -138,7 +141,7 @@ const Navbar = () => {
         <div className="navbar-end pe-7">
           <div className="indicator">
             <span className="indicator-item indicator-bottom badge badge-secondary p-3 py-4">
-              {cart.length}
+              {quantitaTot}
             </span>
             <Button text={<FaOpencart />} callback={()=>openModalCart()} classes={"btn bg-orange-400 rounded-full text-3xl text-white border-white "}></Button>
           </div>

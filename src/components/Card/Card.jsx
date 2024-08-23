@@ -33,7 +33,7 @@ const Card = ({ post, btnText, classes }) => {
           <div className="card-actions justify-start">
 
             {/* Open the modal using document.getElementById('ID').showModal() method */}
-            <Button callback={ handleModal} text={btnText}></Button>
+            <Button callback={ handleModal} text={btnText} classes={"bg-orange-400"}></Button>
 
             <Modal post={post} ingredienti={ingredienti} textClose={textClose} />
              

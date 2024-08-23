@@ -94,19 +94,19 @@ const Menu = () => {
       <div className="flex justify-center mt-14">
         <div className="container flex flex-wrap gap-7 lg:gap-1  justify-evenly">
           {/* ALL */}
-          <Button text={text1} callback={AllCategory} />
+          <Button text={text1} classes={"bg-orange-400"} callback={AllCategory} />
           {/* PANINI */}
-          <Button text={text6} callback={handlePanini} />
+          <Button text={text6} classes={"bg-orange-400"} callback={handlePanini} />
           {/* BURGER */}
-          <Button text={text7} callback={handleBurger} />
+          <Button text={text7} classes={"bg-orange-400"} callback={handleBurger} />
           {/* PIZZE */}
-          <Button text={text2} callback={handlePizze} />
+          <Button text={text2} classes={"bg-orange-400"} callback={handlePizze} />
           {/* SUSHI */}
-          <Button text={text3} callback={handleSushi} />
+          <Button text={text3} classes={"bg-orange-400"} callback={handleSushi} />
           {/* PATATINE */}
-          <Button text={text4} callback={handlePatatine} />
+          <Button text={text4} classes={"bg-orange-400"} callback={handlePatatine} />
           {/* GELATI */}
-          <Button text={text5} callback={handleGelati} />
+          <Button text={text5} classes={"bg-orange-400"} callback={handleGelati} />
         </div>
       </div>
       <div className="flex justify-center my-16 ">

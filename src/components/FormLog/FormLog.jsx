@@ -107,7 +107,7 @@ const FormLog = () => {
             <option>Maschio</option>
             <option>Femmina</option>
           </select>
-          <Button text={"Invia"} classes={""}></Button>
+          <Button text={"Invia"} classes={"bg-orange-400"}></Button>
         </div>
       </form>
     </>

@@ -6,11 +6,16 @@ import Menu from "../views/Menu";
 
 import Login from "../views/Login";
 import CheckOut from "../views/CheckOut";
+import { useContext } from "react";
+import { LoggedContext } from "../contexts/ContextLog";
+
+
 
 
 
 const router = createBrowserRouter([
 
+   
     {
         path:'/',
         element: <Layout />,

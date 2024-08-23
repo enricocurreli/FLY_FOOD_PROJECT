@@ -33,7 +33,7 @@ const Modal = ({post, ingredienti, textClose}) => {
       <Button text={"Aggiungi"} callback={() => handleCart(post)}/>
         <form method="dialog" >
           {/* if there is a button in form, it will close the modal */}
-          <Button text={textClose}/>
+          <Button text={textClose} classes={"bg-orange-400"}/>
         </form>
       </div>
     </div>

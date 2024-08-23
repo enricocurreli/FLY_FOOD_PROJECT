@@ -1,31 +1,68 @@
-import { createContext, useState} from "react";
+import { createContext, useState } from "react";
 
 export const LoggedContext = createContext();
 
+const LoggedContextProvider = ({ children }) => {
+  const [logged, setLogged] = useState(false);
 
+  const [password, setPassword] = useState("");
 
-const LoggedContextProvider = ({children}) => {
-  
-    const[logged, setLogged] = useState(false)
+  const [email, setEmail] = useState("");
 
-    const[password, setPassword] = useState("")
+  const [userName, setuserName] = useState("");
 
-    const[email, setEmail] = useState("")
+  const [name, setName] = useState("");
 
-    const[userName, setuserName] = useState("")
+  const [surname, setSurname] = useState("");
 
-    const [select, setSelect] = useState()
+  const [country, setCountry] = useState("");
 
-    const handleLogged = ()=> setLogged(!logged);
+  const [city, setCity] = useState("");
 
-    let obj={ handleLogged, logged, userName, setuserName,  password, setPassword, email, setEmail, select, setSelect}
-  
-    return (
-    
-        <LoggedContext.Provider value={obj}>
-            {children}
-        </LoggedContext.Provider>
-  )
-}
+  const [phone, setPhone] = useState();
 
-export default LoggedContextProvider
+  const [cap, setCap] = useState();
+
+  const [address, setAddress] = useState("");
+
+  const [number, setNumber] = useState("");
+
+  const [select, setSelect] = useState();
+
+  const handleLogged = () => setLogged(!logged);
+
+  let obj = {
+    handleLogged,
+    logged,
+    userName,
+    setuserName,
+    password,
+    setPassword,
+    email,
+    setEmail,
+    select,
+    setSelect,
+    name,
+    setName,
+    surname,
+    setSurname,
+    country,
+    setCountry,
+    city,
+    setCity,
+    phone,
+    setPhone,
+    cap,
+    setCap,
+    address,
+    setAddress,
+    number,
+    setNumber,
+  };
+
+  return (
+    <LoggedContext.Provider value={obj}>{children}</LoggedContext.Provider>
+  );
+};
+
+export default LoggedContextProvider;

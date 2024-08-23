@@ -3,7 +3,8 @@ const routes = {
     home: '/',
     menu: '/menu',
     login: '/login',
-    checkOut: '/checkOut'
+    checkOut: '/checkOut',
+    OrderSend: '/OrderSend'
 
 }
 

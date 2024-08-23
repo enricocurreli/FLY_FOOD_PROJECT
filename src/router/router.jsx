@@ -8,6 +8,7 @@ import Login from "../views/Login";
 import CheckOut from "../views/CheckOut";
 import { useContext } from "react";
 import { LoggedContext } from "../contexts/ContextLog";
+import OrderSend from "../views/OrderSend";
 
 
 
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
             {
                 path:routes.checkOut,
                 element: <CheckOut />,
+                 
+            },
+            {
+                path:routes.OrderSend,
+                element: <OrderSend />,
                  
             },
         ],

@@ -57,7 +57,7 @@ const Navbar = () => {
       <div
         ref={scrolled}
         className={
-          (scrollY > 80 ? "scrolledY" : " ") +
+          (scrollY > 80 ? "scrolledY " : " ") +
           " navbar bg-cyan-900  text-zinc-100 w-full transition py-3 px-5"
         }
         // + navbarClasses.join(" ")
@@ -103,6 +103,8 @@ const Navbar = () => {
                 </ul> */}
               </li>
               <li className="hover:bg-transparent focus:bg-transparent active:bg-transparent mt-3 grid grid-cols-2 items-center">
+                {/* NAME LOG */}
+
                 {logged ? (
                   <Title
                     tag={"h4"}
@@ -118,6 +120,9 @@ const Navbar = () => {
                     Hi, sign in
                   </Title>
                 )}
+
+                {/* AVATAR  */}
+
                 {!logged ? (
                   <Avatar
                     src={AvatarNT}
@@ -169,7 +174,6 @@ const Navbar = () => {
 
         {/* DESKTOP */}
 
-
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex items-center">
             <li>
@@ -197,32 +201,38 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <div className="navbar-end pe-7">
-            <div className="hover:bg-transparent focus:bg-transparent active:bg-transparent md:block hidden">
-                  {logged ? (
-                    <Title
-                      tag={"h4"}
-                      classes={
-                        "lg:block hidden text-center pointer-events-none p-0 px-2"
-                      }
-                    >
-                      Hi, {userName}{" "}
-                    </Title>
-                  ) : (
-                    <Title
-                      tag={"h4"}
-                      classes={
-                        "lg:block hidden text-center p-0 px-2  pointer-events-none"
-                      }
-                    >
-                      Hi, sign in
-                    </Title>
-                  )}
-            </div>
-            <Link className="md:block hidden p-0 flex justify-center hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                    {" "}
-                    <DropLog />{" "}
-            </Link>
+          <div
+            className={
+              (scrollY > 80 ? " hidden" : " lg:block hidden") +
+              " hover:bg-transparent focus:bg-transparent active:bg-transparent "
+            }
+          >
+            {logged ? (
+              <Title
+                tag={"h4"}
+                classes={
+                  "lg:block hidden text-center pointer-events-none p-0 px-2"
+                }
+              >
+                Hi, {userName}{" "}
+              </Title>
+            ) : (
+              <Title
+                tag={"h4"}
+                classes={
+                  "lg:block hidden text-center p-0 px-2  pointer-events-none"
+                }
+              >
+                Hi, sign in
+              </Title>
+            )}
+          </div>
+          <Link className="lg:block hidden p-0 flex justify-center hover:bg-transparent focus:bg-transparent active:bg-transparent">
+            {" "}
+            <DropLog />{" "}
+          </Link>
 
           <div className="indicator">
             <span className="indicator-item indicator-bottom badge bg-orange-400 border-none p-2 mb-1">
@@ -232,7 +242,7 @@ const Navbar = () => {
               text={<BsCart3 />}
               callback={() => openModalCart()}
               classes={
-                "btn bg-transparent ps-7 rounded-full text-3xl text-white border-none shadow-none hover:shadow focus:border-none active:border-none hover:border-none"
+                "btn bg-transparent  rounded-full text-3xl text-white border-none shadow-none hover:shadow focus:border-none active:border-none hover:border-none"
               }
             ></Button>
           </div>

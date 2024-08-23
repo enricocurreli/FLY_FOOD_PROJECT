@@ -8,7 +8,7 @@ import Title from "../Title/Title";
 
 const Cart = ({logged}) => {
 
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, removeFromCart, handleCart } = useContext(CartContext);
 
   
 
@@ -26,7 +26,7 @@ const Cart = ({logged}) => {
               return (
                 <>
                   <div className="modal-box shadow-none max-w-5xl" key={post.id}>
-                    <div className=" p-3 flex  w-full grid md:grid-cols-4">
+                    <div className=" p-3 w-full grid md:grid-cols-5 justify-center">
                       <div className=" grid md:grid-cols-1 justify-center ">  
                         <Title tag={"h3"} classes={"card-title text-center"}>{post.nome}</Title>
                       </div>
@@ -43,7 +43,10 @@ const Cart = ({logged}) => {
                           </Title>
                         </div>
                         <div className="p-3 grid md:grid-cols-1 content-center">
-                        <Button text={"Rimuovi"} callback={() => removeFromCart(post)} classes={"bg-orange-400 md:w-2/3"}/>
+                        <Button text={"-"} callback={() => removeFromCart(post)} classes={" text-[#0a446bc7] text-xl border-2 md:w-2/4"}/>
+                        </div>
+                        <div className="p-3 grid md:grid-cols-1 content-center">
+                        <Button text={"+"} classes={" text-[#0a446bc7] text-xl border-2 md:w-2/4"} callback={() => handleCart(post)}/>
                         </div>
                     </div>
                   </div>
@@ -58,7 +61,7 @@ const Cart = ({logged}) => {
             <div className="modal-action">
 
             {
-              cart.length !=0 && logged ? <Link to={routes.checkOut}><Button text={"Conferma Ordine"} classes={"bg-orange-400"} callback={()=>onClose} /></Link> : null
+              cart.length !=0 && logged ? <Link to={routes.checkOut}><Button text={"Conferma Ordine"} classes={"bg-orange-400"} /></Link> : null
             }
           
             

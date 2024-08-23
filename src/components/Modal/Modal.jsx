@@ -30,7 +30,7 @@ const Modal = ({post, ingredienti, textClose}) => {
         <h5 className="font-semibold mt-2">Prezzo: <span className="font-normal">{post.prezzo}€</span> </h5>
       </div>
       <div className="modal-action d-flex justify-between">
-      <Button text={"Aggiungi"} callback={() => handleCart(post)}/>
+      <Button text={"Aggiungi"} classes={"bg-orange-400"} callback={() => handleCart(post)}/>
         <form method="dialog" >
           {/* if there is a button in form, it will close the modal */}
           <Button text={textClose} classes={"bg-orange-400"}/>

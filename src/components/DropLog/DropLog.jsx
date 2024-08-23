@@ -35,7 +35,7 @@ const DropLog = () => {
   return (
 
     <>
-    <div className="dropdown dropdown-hover lg:block hidden">
+    <div className="dropdown dropdown-end dropdown-hover lg:block hidden">
       <div
         tabIndex={0}
         role="button"
@@ -55,27 +55,30 @@ const DropLog = () => {
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content menu  bg-orange-400 rounded-box z-[1] w-52 p-2 shadow"
+        className="dropdown-content menu  bg-[#ECE3CA] rounded-box z-[1] w-52 p-2 shadow h-24"
       >
         {!logged ? (
           <li>
-            <Link to={routes.login}>
-              <Button classes={"hover:scale-105 scale-90 bg-orange-400"} text={"Login"} />
+            <Link to={routes.login} className="flex justify-center hover:bg-transparent">
+              <Button classes={"hover:scale-[0.75] scale-[0.60] w-full bg-orange-400"} text={"Login"} />
             </Link>
           </li>
         ) : (
+
+          <>
           <li>
             {" "}
             <Button
-              classes={"hover:scale-90 scale-75 bg-orange-400"}
+              classes={"hover:scale-75 scale-[0.65] bg-orange-400"}
               text={"SignOut"}
               callback={() => handleSignOut()}
             />
           </li>
+          </>
         )}
       </ul>
     </div>
-    <div className="lg:hidden block flex">
+    <div className="lg:hidden block">
     <Avatar />{" "}
     {!logged ? (
           <li>

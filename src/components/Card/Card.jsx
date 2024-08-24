@@ -26,7 +26,7 @@ const Card = ({ post, btnText, classes }) => {
   
   return (
     <div className="w-full md:w-1/5 m-14 md:m-20 flex justify-center md:justify-between myShadow">
-      <div className={"card bg-base-100 image-full w-full  hover:scale-110 transition-all "}>
+      <div key={post.id} className={"card bg-base-100 image-full w-full  hover:scale-110 transition-all "}>
         <figure>
           <Img src={post.img} alt={"Immagine prodotto"} />           
         </figure>

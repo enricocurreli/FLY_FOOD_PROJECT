@@ -7,7 +7,7 @@ import { Link} from "react-router-dom";
 import routes from "../../router/routes";
 
 const ShipAdress = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
   const {
     userName,
     setuserName,
@@ -31,26 +31,12 @@ const ShipAdress = () => {
     setNumber
   } = useContext(LoggedContext);
 
-  const [user, setUser] = useState({})
+
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
-
-    const account = {
-
-        name,
-        surname,
-        userName,
-        phone,
-        country,
-        city,
-        cap,
-        address,
-        number
-
-    }
-
-    setUser(account);
+    
     
 
   };
@@ -128,6 +114,7 @@ const ShipAdress = () => {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </label>
         {/* SURNAME */}
@@ -150,6 +137,7 @@ const ShipAdress = () => {
             placeholder="Surname"
             value={surname}
             onChange={(e) => setSurname(e.target.value)}
+            required
           />
         </label>
 
@@ -157,9 +145,9 @@ const ShipAdress = () => {
           <select
             className="select select-bordered w-full max-w-xs"
             onChange={(e) => setCountry(e.target.value)}
-            value={country}
+            value={country} required
           >
-            <option disabled selected>
+            <option selected>
               Country
             </option>
             <option>Italy</option>
@@ -196,6 +184,7 @@ const ShipAdress = () => {
               placeholder="CAP"
               onChange={(e) => setCap(e.target.value)}
               value={cap}
+              required
             />
           </label>
         </div>
@@ -226,6 +215,7 @@ const ShipAdress = () => {
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
               value={city}
+              required
             />
           </label>
 
@@ -253,6 +243,7 @@ const ShipAdress = () => {
               placeholder="Phone"
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
+              required
             />
           </label>
         </div>
@@ -283,6 +274,7 @@ const ShipAdress = () => {
               placeholder="Address"
               onChange={(e) => setAddress(e.target.value)}
               value={address}
+              required
             />
           </label>
 
@@ -312,6 +304,7 @@ const ShipAdress = () => {
               placeholder="Nº"
               onChange={(e) => setNumber(e.target.value)}
               value={number}
+              required
             />
           </label>
         </div>
@@ -325,10 +318,11 @@ const ShipAdress = () => {
           </Title>
         </div>
         <div className="flex justify-end mt-10">
-          <Link to={routes.OrderSend} user={user}>
+          <Link to={routes.OrderSend}>
             <Button
                 text={"Invia Ordine"}
                 classes={"bg-orange-400 w-full"}
+                callback={()=> setCart([])}
             />
           </Link>
         </div>

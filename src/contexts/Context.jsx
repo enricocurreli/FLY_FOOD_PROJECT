@@ -58,6 +58,7 @@ const CartContextProvider = ({children}) => {
         setCart,
         handleCart,
         removeFromCart
+        
     }
 
     return (

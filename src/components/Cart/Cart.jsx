@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { CartContext } from "../../contexts/Context";
 import { Link } from "react-router-dom";
 import Title from "../Title/Title";
-
+// import logo from "../../assets/react.svg"
 
 const Cart = ({logged}) => {
 
@@ -13,6 +13,7 @@ const Cart = ({logged}) => {
   
 
   return (
+
 
     <dialog id="myCart" className="modal">
         <div className="modal-box w-11/12 max-w-4xl">
@@ -61,7 +62,10 @@ const Cart = ({logged}) => {
             <div className="modal-action">
 
             {
-              cart.length !=0 && logged ? <Link to={routes.checkOut}><Button text={"Conferma Ordine"} classes={"bg-orange-400"} /></Link> : null
+              cart.length !=0 && logged ? 
+              <Link to={routes.checkOut}>
+                <Button text={"Conferma Ordine"} classes={"bg-orange-400"} />
+              </Link> : null
             }
           
             

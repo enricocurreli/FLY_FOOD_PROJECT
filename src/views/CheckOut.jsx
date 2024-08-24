@@ -24,7 +24,7 @@ const CheckOut = () => {
   } = useContext(LoggedContext);
 
 
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart} = useContext(CartContext);
 
   
 
@@ -40,11 +40,16 @@ const CheckOut = () => {
           return (
             <>
               <div className="shadow-none max-w-5xl" key={post.id}>
-                <div className=" p-3 mb-6 w-full grid lg:grid-cols-5 px-3 justify-center">
+                <div className=" p-3 mb-6 w-full grid lg:grid-cols-4 px-3 justify-center">
                     <Avatar classesCnt={"rounded-2xl"} src={post.img} avtClasses={"avatar lg:w-full lg:ps-2 lg:pe-3 w-60"} />
                   <div className=" grid lg:grid-cols-1 justify-center ">
-                    <Title tag={"h3"} classes={"card-title text-center mt-5"}>
+                    
+                    <Title tag={"h5"} classes={"font-semibold p-3 text-center lg:mt-4"}>
+                    Nome:{" "}
+                      <div className="font-normal px-3 ">
                       {post.nome}
+                      </div>{" "}
+                      
                     </Title>
                   </div>
                   <div className="grid lg:grid-cols-1">

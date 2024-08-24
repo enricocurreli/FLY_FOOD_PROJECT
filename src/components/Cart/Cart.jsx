@@ -34,7 +34,7 @@ const Cart = ({logged, setOpenModal, openModal}) => {
                     </Title>
                   </Title>
 
-              <form method="dialog " >
+              <form method="dialog" >
                 <Button classes={" btn btn-sm border-none shadow text-[#0a446bc7] absolute  right-3 top-3 bg-trasparent "} text={"x"} />
               </form>
             </div>

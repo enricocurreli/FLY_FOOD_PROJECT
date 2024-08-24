@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./Navbar.css";
 import hamburger from "../../assets/hamburger1.png";
 import routes from "../../router/routes";
@@ -20,8 +20,28 @@ import Avatar from "../Avatar/Avatar";
 const Navbar = () => {
   const { cart } = useContext(CartContext);
   const { logged, userName, select } = useContext(LoggedContext);
+  const [openModal, setOpenModal] = useState(true)
 
-  const openModalCart = () => document.getElementById("myCart").showModal();
+
+
+  const openModalCart = () => {
+    
+   const cartModal = document.getElementById("myCart");
+    
+  
+   if(openModal){
+
+    cartModal.showModal();
+
+   }if(!openModal){
+
+    cartModal.closeModal();
+    setOpenModal(true)
+
+   }
+    
+  }
+  
 
   // const [scrolled, setScrolled] = useState(false);
 
@@ -251,7 +271,7 @@ const Navbar = () => {
 
       {/* CARRELLO  */}
 
-      <Cart logged={logged} />
+      <Cart logged={logged} openModal={openModal} setOpenModal={setOpenModal} />
     </>
   );
 };

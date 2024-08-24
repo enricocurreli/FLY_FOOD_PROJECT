@@ -60,7 +60,7 @@ const DropLog = () => {
         {!logged ? (
           <li>
             <Link to={routes.login} className="flex justify-center hover:bg-transparent">
-              <Button classes={"hover:scale-[0.75] scale-[0.60] w-full bg-orange-400"} text={"Login"} />
+              <Button classes={"hover:scale-[0.75] scale-[0.80] w-full bg-orange-400"} text={"Login"} />
             </Link>
           </li>
         ) : (
@@ -69,7 +69,7 @@ const DropLog = () => {
           <li>
             {" "}
             <Button
-              classes={"hover:scale-75 scale-[0.65] bg-orange-400"}
+              classes={"hover:scale-75 scale-[0.80] bg-orange-400"}
               text={"SignOut"}
               callback={() => handleSignOut()}
             />

@@ -92,7 +92,7 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex justify-center mt-14">
-        <div className="container flex flex-wrap gap-7 lg:gap-1  justify-evenly">
+        <div className="md:grid md:grid-cols-7 md:gap-3 flex flex-wrap justify-center gap-2 px-5 ">
           {/* ALL */}
           <Button text={text1} classes={"bg-orange-400"} callback={AllCategory} />
           {/* PANINI */}

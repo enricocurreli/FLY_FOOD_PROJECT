@@ -37,13 +37,8 @@ const ShipAdress = () => {
     
     e.preventDefault();
     
-    
-
   };
-
  
-  
-  
 
   return (
     <>
@@ -308,16 +303,14 @@ const ShipAdress = () => {
             />
           </label>
         </div>
-        <div className="mt-10">
-          <Title tag={"h5"} classes={"mt-10 p-4 font-normal "}>
+        <div className="mt-10 grid grid-cols-2">
+          <Title tag={"h5"} classes={"p-4 font-normal "}>
             {" "}
             TOTALE:{" "}
             <span className="font-semibold text-2xl">
               {cart.reduce((acc, item) => acc + item.totale, 0)}€
             </span>{" "}
           </Title>
-        </div>
-        <div className="flex justify-end mt-10">
           <Link to={routes.OrderSend}>
             <Button
                 text={"Invia Ordine"}

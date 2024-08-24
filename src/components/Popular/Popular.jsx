@@ -51,7 +51,7 @@ const Popular = () => {
   return (
     <>
   
-      <Section textFirst={"International"} textSecond={"Cuisine"} classes={"flex justify-center mt-28"} articleProps={"text-center text-2xl  px-12 py-3 mt-10  overflow-hidden"} tFstClasses={"text-6xl text-center font-medium"} tSndClasses={"text-6xl font-extralight px-6"}>
+      <Section textFirst={"International"} textSecond={"Cuisine"} classes={"flex justify-center mt-28"} articleProps={"text-center text-2xl  px-12 py-3 mt-10  overflow-hidden"} tFstClasses={"md:text-6xl text-5xl text-center font-medium"} tSndClasses={"md:text-6xl text-5xl font-extralight px-6"}>
 
             <Paragraph classes={"text-center text-2xl font-light lg:px-12 py-3 mt-10 mb-5"} aos={"fade-right"}>Il nostro ristorante offre un'esperienza culinaria unica, dove
             ogni piatto è preparato con passione e attenzione ai dettagli.</Paragraph>

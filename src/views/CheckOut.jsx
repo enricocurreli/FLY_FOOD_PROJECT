@@ -30,7 +30,7 @@ const CheckOut = () => {
 
 
   return (
-    <div className="my-52  grid md:grid-cols-2 ">
+    <div className="md:my-52 my-40  grid md:grid-cols-2 ">
     
       <div className="md:w-50%">
       <Title tag={"h3"} classes={"text-4xl text-center font-medium mb-20"}> Rivedi <span className="text-4xl font-extralight">Ordine</span></Title>
@@ -77,12 +77,12 @@ const CheckOut = () => {
         })}
       </div>
 
-      <div className="md:w-50%">
+      <div className="md:w-50% ">
 
       <Title tag={"h3"} classes={"text-4xl text-center font-medium mb-10"}> Spedizione <span className="text-4xl font-extralight">Ordine</span></Title>
       <Paragraph classes={"text-center text-xl font-light lg:px-12 py-3 mb-5"}>Inserisci i dati per la spedizione</Paragraph>
       
-        <div className="flex justify-center">
+        <div className="flex justify-center sticky top-40 ">
           <ShipAdress />
         </div>
       </div>

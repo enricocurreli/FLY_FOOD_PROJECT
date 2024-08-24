@@ -77,7 +77,7 @@ const Navbar = () => {
       <div
         ref={scrolled}
         className={
-          (scrollY > 80 ? "scrolledY " : " ") +
+          (scrollY > 30 ? "scrolledY " : " ") +
           " navbar bg-cyan-900  text-zinc-100 w-full transition py-3 px-5"
         }
         // + navbarClasses.join(" ")
@@ -225,7 +225,7 @@ const Navbar = () => {
         <div className="navbar-end pe-7">
           <div
             className={
-              (scrollY > 80 ? " hidden" : " lg:block hidden") +
+              (scrollY > 30 ? " hidden" : " lg:block hidden") +
               " hover:bg-transparent focus:bg-transparent active:bg-transparent "
             }
           >

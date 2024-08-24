@@ -10,6 +10,7 @@ const Cart = ({logged, setOpenModal, openModal}) => {
 
   const { cart, removeFromCart, handleCart } = useContext(CartContext);
 
+  
   setOpenModal(true)
   
   if(!openModal){
@@ -44,7 +45,7 @@ const Cart = ({logged, setOpenModal, openModal}) => {
               cart.map((post) => {
                 return (
                   <>
-                      <div className=" p-3 w-full grid md:grid-cols-5 mt-5" key={post.id}>
+                      <div className=" p-3 md:px-10 w-full grid md:grid-cols-5 mt-5" key={post.id}>
                         <div className=" grid md:grid-cols-1 justify-center ">  
                           <Title tag={"h3"} classes={"card-title text-center"}>{post.nome}</Title>
                         </div>

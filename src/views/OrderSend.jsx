@@ -10,7 +10,20 @@ const OrderSend = () => {
   const { cart } = useContext(CartContext);
   const { email, name, surname, country, city, phone, cap, address, number } =
     useContext(LoggedContext);
-  console.log(name);
+  
+    function order() {
+
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const numbers = '0123456789';
+      let result = '';
+      for (let i = 3; i > 0; i--) {
+  
+          result += characters[(Math.floor(Math.random() * characters.length))] + numbers[(Math.floor(Math.random() * numbers.length))] ;
+      }
+      return result;
+    }
+
+    const numOrder = order();
 
   return (
     <div className="my-36 md:mt-52 md:mb-[173px] lg:mt-48 lg:mb-[280px]">
@@ -28,13 +41,24 @@ const OrderSend = () => {
         >
           <Img src={deliveryLogo} classes={"scale-[85%]"} />
         </Section>
-
+        
         <Paragraph
           classes={"text-center text-2xl font-light lg:px-12 py-3 mb-5"}
+        >
+       N. ordine: #{numOrder}
+        </Paragraph>
+
+        <Paragraph
+          classes={"text-center text-2xl font-light lg:px-12 py-3"}
         >
           Grazie mille {name}, per aver ordinato dal nostro sito! <br /> Siamo
           felici di informarti che il tuo ordine è in arrivo e presto sarà
           consegnato a casa tua.{" "}
+        </Paragraph>
+        <Paragraph
+          classes={"text-center text-2xl font-light lg:px-12 py-3 "}
+        >
+        Il riepilogo dell'ordine è stato inviato all'indirizzo email:<span className="font-normal px-3  ">{email}</span>
         </Paragraph>
       </Section>
     </div>

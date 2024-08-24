@@ -51,6 +51,7 @@ const FormLog = () => {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </label>
         <label
@@ -72,6 +73,7 @@ const FormLog = () => {
             placeholder="Username"
             value={userName}
             onChange={(e) => setuserName(e.target.value)}
+            required
           />
         </label>
         <label
@@ -95,15 +97,13 @@ const FormLog = () => {
             type="password"
             className="grow"
             placeholder="Password"
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </label>
         <div className="flex flex-col lg:justify-between gap-3 lg:flex-row mt-2">
-          <select className="select select-bordered w-full max-w-xs" onChange={(e) => setSelect(e.target.value)} value={select}>
-            <option disabled selected>
-              Sesso
-            </option>
+          <select className="select select-bordered w-full max-w-xs" onChange={(e) => setSelect(e.target.value)}>
+            <option disabled selected>Sesso</option>
             <option>Maschio</option>
             <option>Femmina</option>
           </select>

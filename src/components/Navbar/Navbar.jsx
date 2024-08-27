@@ -143,7 +143,7 @@ const Navbar = () => {
 
                 {/* AVATAR  */}
 
-                {!logged ? (
+                {!logged || select == "Preferisco non dirlo" ? (
                   <Avatar
                     src={AvatarNT}
                     classesCnt={

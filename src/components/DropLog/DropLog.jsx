@@ -54,7 +54,7 @@ const DropLog = () => {
           role="button"
           className="btn bg-transparent border-none shadow-none hover:bg-transparent hover:scale-110"
         >
-          {!logged ? (
+          {!logged || select == "Preferisco non dirlo" ? (
             <Avatar
               src={AvatarNT}
               classesCnt={

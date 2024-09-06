@@ -11,7 +11,7 @@ const Footer = () => {
         <Img src={hamburger} classes={"md:w-14 w-11"} />
         <Title tag={"h4"} classes={"lg:block hidden text-center"}>FLY FOOD</Title>
         <Paragraph classes={"font-bold"}>Enrico Curreli</Paragraph>
-        <Paragraph>CoParagraphyright © {new Date().getFullYear()} - All right reserved</Paragraph>
+        <Paragraph>Copyright © {new Date().getFullYear()} - All right reserved</Paragraph>
       </aside>
       <nav>
         <Section classes={"grid grid-flow-col gap-4"}>

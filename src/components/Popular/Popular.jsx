@@ -47,7 +47,7 @@ const Popular = () => {
     AOS.init();
   }, []);
 
-  const posts = useFetch("/src/data.json");
+  const posts = useFetch("/data.json");
   const lastNews = posts && posts.filter((post) => post.id % 10 == 0 );
 
   return (

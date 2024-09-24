@@ -8,7 +8,7 @@ const CartContextProvider = ({children}) => {
     
    
     const [cart, setCart] = useState([]);
-    const posts = useFetch("/src/data.json");
+    const posts = useFetch("/data.json");
 
     const handleCart = (posts)=>{
         

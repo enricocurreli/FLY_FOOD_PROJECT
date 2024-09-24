@@ -7,7 +7,7 @@ import useFetch from "../hooks/useFetch";
 
 const Menu = () => {
   
-  const posts = useFetch("/src/data.json")
+  const posts = useFetch("/data.json");
   const [filteredPosts, setFilteredPosts] = useState();
   
   

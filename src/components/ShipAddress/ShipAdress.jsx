@@ -220,7 +220,7 @@ const ShipAdress = () => {
               classes={"grow"}
               placeholder={"Nº"}
               change={(e) => setNumber(e.target.value)}
-              value={phone}
+              value={number}
             />
           </Label>
         </Article>
